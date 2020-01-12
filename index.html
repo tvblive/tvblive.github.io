@@ -5,17 +5,16 @@
 </head>
 <body>
   <p>辈翠台直播</p>
-  <div id="video" style="width: 600px; height: 400px;"></div>
+  <div id="tvblive" style="width: 1000px;height: 600px;"></div>
   <script type="text/javascript">
     var videoObject = {
-      container: '#video', //容器的ID或className
+      container: '#tvblive',
       variable: 'player',
-      debug:true,//开启调试模式
-      flashplayer: false, //是否需要强制使用flashplayer
-      video: 'http://116.199.5.51:8114/index.m3u8?Fsv_chan_hls_se_idx=188&FvSeid=1&Fsv_ctype=LIVES&Fsv_otype=1&Provider_id=&Pcontent_id=.m3u8'
+      autoplay:true,//自动播放
+      live:true,
+      video:'http://116.199.5.51:8114/index.m3u8?Fsv_chan_hls_se_idx=188&FvSeid=1&Fsv_ctype=LIVES&Fsv_otype=1&Provider_id=&Pcontent_id=.m3u8'
     };
     var player = new ckplayer(videoObject);
   </script>
-
 </body>
 </html>
