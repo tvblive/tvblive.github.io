@@ -1,8 +1,41 @@
 <html>
 <head>
   <title>翡翠台直播</title>
+  <script src="swfobject.js"></script>
 </head>
 <body>
-  辈翠台直播
+  <p>辈翠台直播</p>
+  <script>
+    var flashvars = {
+        // M3U8 url, or any other url which compatible with SMP player (flv, mp4, f4m)         
+        // escaped it for urls with ampersands
+        src: escape("http://116.199.5.51:8114/index.m3u8?Fsv_chan_hls_se_idx=188&FvSeid=1&Fsv_ctype=LIVES&Fsv_otype=1&Provider_id=&Pcontent_id=.m3u8"),
+        // url to OSMF HLS Plugin
+        plugin_m3u8: "https://tvblive.github.io/HLSProviderOSMF.swf",
+    };
+    var params = {
+        // self-explained parameters
+        allowFullScreen: true,
+        allowScriptAccess: "always",
+        bgcolor: "#000000"
+    };
+    var attrs = {
+        name: "player"
+    };
+ 
+    swfobject.embedSWF(
+        // url to SMP player
+        "https://tvblive.github.io/StrobeMediaPlayback.swf",
+        // div id where player will be place
+        "player",
+        // width, height 
+        "800", "485",
+        // minimum flash player version required
+        "10.2",
+        // other parameters
+        null, flashvars, params, attrs
+    );
+</script>
+
 </body>
 </html>
